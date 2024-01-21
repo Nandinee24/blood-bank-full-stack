@@ -24,8 +24,8 @@ const userSchema = new mongoose.Schema({
             return false;
         },
     },
-    hospitalName:{
-        type:String,
+    hospitalName: {
+        type: String,
         required: function () {
             if (this.role === 'hospital') {
                 return true;
@@ -54,6 +54,6 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, 'phone number is required'],
     },
-},{timestamps:true});
+}, { timestamps: true });
 
-module.exports = mongoose.model('users',userSchema)
+module.exports = mongoose.model('users', userSchema)
