@@ -13,4 +13,5 @@ router.post('/create-inventory', authMiddleware, creatInventoryController)
 router.get('/get-inventory', authMiddleware, getInventoryController)
 
 
+
 module.exports = router
