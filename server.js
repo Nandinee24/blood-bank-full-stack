@@ -4,6 +4,7 @@ const colors = require('colors');
 const morgan = require('morgan');
 const cors = require('cors');
 const connectDB = require('./config/db');
+const jwt = require('jsonwebtoken');
 
 
 //dot config
@@ -26,6 +27,7 @@ app.use(morgan('dev'))
 //1 test route
 app.use('/api/v1/test', require('./routes/testRoutes'));
 app.use('/api/v1/auth', require('./routes/authRouts'));
+app.use('/api/v1/inventory', require('./routes/inventoryRouts'));
 
 
 

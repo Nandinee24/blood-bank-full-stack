@@ -1,6 +1,6 @@
 const userModel = require("../models/userModel");
 const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
 
 const registerController = async (req, res) => {
     try {
@@ -51,6 +51,14 @@ const loginController = async (req, res) => {
             })
         }
 
+        //check role 
+        if (user.role !== req.body.role) {
+            return res.status(501).send({
+                success: false,
+                message: 'ROLE DOESNOT MATCH'
+            })
+        }
+
         //comparing passwords
         const comaparePassword = await bcrypt.compare(req.body.password, user.password)
 
@@ -80,4 +88,23 @@ const loginController = async (req, res) => {
     }
 }
 
-module.exports = { registerController, loginController };
+//get user controller
+const currentUserController = async (req, res) => {
+    try {
+        const user = await userModel.findOne({ _id: req.body.userId })
+        return res.status(200).send({
+            success: true,
+            message: 'User Fetched successfully',
+            user,
+        })
+    } catch (error) {
+        console.log(error)
+        return res.status(500).send({
+            success: false,
+            message: 'Unable to get current user',
+            error
+        })
+    }
+};
+
+module.exports = { registerController, loginController, currentUserController };
