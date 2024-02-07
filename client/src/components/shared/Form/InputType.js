@@ -10,7 +10,7 @@ const InputType = ({
 }) => {
   return (
     <>
-      <div className="form-floating mb-3">
+      <div className="form-floating mb-3 a-center j-center">
         <input
           type={inputType}
           className="form-control"

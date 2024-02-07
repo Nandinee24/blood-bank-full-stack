@@ -6,7 +6,12 @@ const Register = () => {
     <>
       <div className="row g-0">
         <div className="col-md-4 form-container">
-          <Form formTitle={"Register Page"} submitBtn={"Register"} />
+          <Form
+
+            formTitle={"Registration Page"}
+            submitBtn={"Register"}
+            formType={"register"}
+          />
         </div>
       </div>
     </>
