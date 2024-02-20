@@ -106,14 +106,17 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                     <InputType
                       labelText={"Email"}
                       labelFor={"forEmail"}
+                      id={"forEmail"}
                       inputType={"email"}
                       name={"email"}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
+                      autocomplete="off"
                     />
                     <InputType
                       labelText={"Password"}
                       labelFor={"forPassword"}
+                      id={"forPassword"}
                       inputType={"password"}
                       name={"password"}
                       value={password}
@@ -129,6 +132,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                       <InputType
                         labelText={"Name"}
                         labelFor={"forName"}
+                        id={"forName"}
                         inputType={"name"}
                         name={"name"}
                         value={name}
@@ -139,6 +143,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                       <InputType
                         labelText={"Organization Name"}
                         labelFor={"forOrganizationName"}
+                        id={"forOrganizationName"}
                         inputType={"organizationName"}
                         name={"organizationName"}
                         value={organizationName}
@@ -149,6 +154,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                       <InputType
                         labelText={"Hospital Name"}
                         labelFor={"forHospitalName"}
+                        id={"forHospitalName"}
                         inputType={"hospitalName"}
                         name={"hospitalName"}
                         value={hospitalName}
@@ -158,6 +164,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                     <InputType
                       labelText={"Email"}
                       labelFor={"forEmail"}
+                      id={"forEmail"}
                       inputType={"email"}
                       name={"email"}
                       value={email}
@@ -166,6 +173,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                     <InputType
                       labelText={"Password"}
                       labelFor={"forPassword"}
+                      id={"forPassword"}
                       inputType={"password"}
                       name={"password"}
                       value={password}
@@ -175,6 +183,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                     <InputType
                       labelText={"Website"}
                       labelFor={"forWebsite"}
+                      id={"forWebsite"}
                       inputType={"website"}
                       name={"website"}
                       value={website}
@@ -183,6 +192,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                     <InputType
                       labelText={"Address"}
                       labelFor={"forAddress"}
+                      id={"forAddress"}
                       inputType={"address"}
                       name={"address"}
                       value={address}
@@ -191,6 +201,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                     <InputType
                       labelText={"Phone"}
                       labelFor={"forPhone"}
+                      id={"forPhone"}
                       inputType={"phone"}
                       name={"phone"}
                       value={phone}

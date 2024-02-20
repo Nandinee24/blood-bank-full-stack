@@ -51,8 +51,23 @@ const userSchema = new mongoose.Schema({
 
     },
     phone: {
+        // type: Number,
+        // // required: [true, 'phone number is required'],
+        // required: function () {
+        //     if (this.phone.length === 10) {
+        //         return true;
+        //     }
+        //     return false;
+        // },
         type: String,
-        required: [true, 'phone number is required'],
+        required: [true, 'Phone number is required'],
+        validate: {
+            validator: function (v) {
+                // Regular expression to match exactly 10 digits
+                return /^\d{10}$/.test(v);
+            },
+            message: props => `${props.value} is not a valid phone number! Please enter a 10-digit number.`
+        }
     },
 }, { timestamps: true });
 

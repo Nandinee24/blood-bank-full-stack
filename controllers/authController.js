@@ -24,6 +24,7 @@ const registerController = async (req, res) => {
         return res.status(201).send({
             success: true,
             message: 'User Registered Successfully',
+            user,
         })
 
     } catch (error) {
@@ -82,7 +83,7 @@ const loginController = async (req, res) => {
         console.log(err)
         res.status(500).send({
             success: false,
-            message: 'Erroe in Login API'
+            message: 'Error in Login API'
 
         })
     }
