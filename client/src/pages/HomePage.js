@@ -51,7 +51,7 @@ const HomePage = () => {
                   <th scope="col">Blood Group</th>
                   <th scope="col">Inventory Type</th>
                   <th scope="col">Quantity</th>
-                  <th scope="col">Domar Email</th>
+                  <th scope="col">Donar Email</th>
                   <th scope="col">Time & Date</th>
                 </tr>
               </thead>
@@ -61,7 +61,7 @@ const HomePage = () => {
                     <td>{record.bloodGroup}</td>
                     <td>{record.inventoryType}</td>
                     <td>{record.quantity} ML</td>
-                    <td>{record.donarEmail}</td>
+                    <td>{record.email}</td>
                     <td>
                       {moment(record.createdAt).format("DD/MM/YYYY hh:mm A")}
                     </td>

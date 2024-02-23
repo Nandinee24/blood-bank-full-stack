@@ -22,13 +22,14 @@
 
 .menu-item i {
     font-size: 1.2rem;
-    margin: 0 15px;
+    margin: 0 25px;
     color: aliceblue;
 }
 
 .active {
     background-color: aliceblue;
-    padding: 10px;
+    padding: 15px 0;
+    margin-top: 25px;
 }
 
 .active a,

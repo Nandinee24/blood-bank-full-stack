@@ -7,9 +7,7 @@ const Modal = () => {
   const [inventoryType, setInventoryType] = useState("in");
   const [bloodGroup, setBloodGroup] = useState("");
   const [quantity, setQuantity] = useState(0);
-  const [donarEmail, setDonarEmail] = useState("");
-  const [hospitalEmail, setHospitalEmail] = useState("");
-
+  const [email, setEmail] = useState("");
   const { user } = useSelector((state) => state.auth);
 
   //handle modal data
@@ -21,8 +19,8 @@ const Modal = () => {
       }
 
       const { data } = await API.post("/inventory/create-inventory", {
-        donarEmail,
-        email: user?.email,
+
+        email,
         organization: user?._id,
         inventoryType,
         bloodGroup,
@@ -34,7 +32,7 @@ const Modal = () => {
         window.location.reload();
       }
     } catch (error) {
-      alert(error.response.data.message)
+      alert(error.respose.data.message)
       console.log(error);
       window.location.reload();
 
@@ -127,23 +125,13 @@ const Modal = () => {
                   B-
                 </option>
               </select>
-              {inventoryType === "in" && (
-                <InputType
-                  labelText={"Donar Email"}
-                  labelFor={"donarEmail"}
-                  inputType={"email"}
-                  value={donarEmail}
-                  onChange={(e) => setDonarEmail(e.target.value)}
-                />)}
-              {inventoryType === "out" && (
-                <InputType
-                  labelText={"Hospital Email"}
-                  labelFor={"hospitalEmail"}
-                  inputType={"email"}
-                  value={hospitalEmail}
-                  onChange={(e) => setHospitalEmail(e.target.value)}
-                />)}
-
+              <InputType
+                labelText={" Email"}
+                labelFor={"donarEmail"}
+                inputType={"email"}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
               <InputType
                 labelText={"Quantity (ML)"}
                 labelFor={"quantity"}
