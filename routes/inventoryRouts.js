@@ -1,6 +1,6 @@
 const express = require('express')
 
-const { creatInventoryController, getInventoryController, getDonarsController } = require('../controllers/inventoryController')
+const { creatInventoryController, getInventoryController, getDonarsController, getHospitalsController, getOrganizationController, getOrganizationForHospitalController } = require('../controllers/inventoryController')
 const authMiddleware = require('../middlewares/authMiddleware')
 
 const router = express.Router()
@@ -14,6 +14,16 @@ router.get('/get-inventory', authMiddleware, getInventoryController)
 
 //GET ALL Donar RECORDS
 router.get('/get-donars', authMiddleware, getDonarsController)
+
+//GET ALL Hospital RECORDS
+router.get('/get-hospitals', authMiddleware, getHospitalsController)
+
+//GET ALL Organization RECORDS
+router.get('/get-organization', authMiddleware, getOrganizationController)
+
+//GET ALL Organization RECORDS
+router.get('/get-organization-for-hospital', authMiddleware, getOrganizationForHospitalController)
+
 
 
 module.exports = router

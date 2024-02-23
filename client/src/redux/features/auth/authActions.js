@@ -12,9 +12,10 @@ export const userLogin = createAsyncThunk(
       //store token
       if (data.success) {
         localStorage.setItem("token", data.token);
-        toast.success(data.message);
+
         // alert(data.message)
         window.location.replace('/');
+        toast.success(data.message, { autoClose: 2000 });
 
       }
       return data;
@@ -61,7 +62,7 @@ export const userRegister = createAsyncThunk(
       })
 
       if (data?.success) {
-        alert("Registration Successfull")
+        // alert("Registration Successfull")
         toast.success("Registration Successfull")
         window.location.replace('/login');
       }

@@ -31,11 +31,20 @@ const Modal = () => {
         alert("New Record Created");
         window.location.reload();
       }
-    } catch (error) {
-      alert(error.respose.data.message)
-      console.log(error);
-      window.location.reload();
+      // } catch (error) {
+      //   alert(error.respose.data.message)
+      //   console.log(error);
+      //   window.location.reload();
 
+      // }
+    } catch (error) {
+      if (error.response && error.response.data && error.response.data.message) {
+        alert(error.response.data.message);
+      } else {
+        alert("An error occurred. Please try again later.");
+      }
+      console.error(error);
+      window.location.reload();
     }
   };
 

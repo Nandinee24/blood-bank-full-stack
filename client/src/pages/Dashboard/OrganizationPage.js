@@ -3,16 +3,16 @@ import Layout from "../../components/shared/Layout/Layout";
 import moment from "moment";
 import API from "../../services/API";
 
-const Hospitals = () => {
+const OrganizationPage = () => {
   const [data, setData] = useState([]);
-
-  const getDonars = async () => {
+  //find org records
+  const getOrg = async () => {
     try {
-      const { data } = await API.get("/inventory/get-hospitals");
+      const { data } = await API.get("/inventory/get-organization");
       //   console.log(data);
       setData(data);
       if (data?.success) {
-        setData(data?.hospitals);
+        setData(data?.organizations);
       }
     } catch (error) {
       console.log(error);
@@ -20,7 +20,7 @@ const Hospitals = () => {
   };
 
   useEffect(() => {
-    getDonars();
+    getOrg();
   });
 
   return (
@@ -31,17 +31,15 @@ const Hospitals = () => {
             <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th scope="col">Phone</th>
-            <th scope="col">Address</th>
             <th scope="col">Date</th>
           </tr>
         </thead>
         <tbody>
           {data?.map((record) => (
             <tr key={record._id}>
-              <td>{record.hospitalName}</td>
+              <td>{record.organizationName}</td>
               <td>{record.email}</td>
               <td>{record.phone}</td>
-              <td>{record.address}</td>
               <td>{moment(record.createdAt).format("DD/MM/YYYY hh:mm A")}</td>
             </tr>
           ))}
@@ -51,4 +49,4 @@ const Hospitals = () => {
   );
 };
 
-export default Hospitals;
+export default OrganizationPage;

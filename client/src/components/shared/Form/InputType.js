@@ -4,6 +4,7 @@ const InputType = ({
   labelFor,
   labelText,
   inputType,
+  id,
   value,
   onChange,
   name,
@@ -15,6 +16,7 @@ const InputType = ({
           type={inputType}
           className="form-control"
           name={name}
+          id={id}
           value={value}
           onChange={onChange}
         />

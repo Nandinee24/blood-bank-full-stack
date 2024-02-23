@@ -2,6 +2,7 @@ import React from "react";
 import { BiDonateBlood } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 import { FaUser } from "react-icons/fa6";
+import { toast } from 'react-hot-toast'
 import { useSelector } from "react-redux";
 
 const Header = () => {
@@ -10,8 +11,9 @@ const Header = () => {
   const navigate = useNavigate();
   // logout handler
   const handleLogout = () => {
+    toast.success("Logout Success");
     localStorage.clear();
-    alert("Logout Success");
+
     navigate("/login");
   };
   return (

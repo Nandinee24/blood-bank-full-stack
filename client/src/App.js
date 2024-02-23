@@ -2,13 +2,14 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
-import { ToastContainer } from 'react-toastify';
+// import { ToastContainer } from 'react-toastify';
 import { Toaster } from 'react-hot-toast'
 import 'react-toastify/dist/ReactToastify.css';
 import ProtectedRoutes from "./components/Routes/ProtectedRoutes";
 import PublicRoutes from "./components/Routes/PublicRoutes";
 import Donar from "./pages/Dashboard/Donar";
 import Hospitals from './pages/Dashboard/Hospitals';
+import OrganizationPage from "./pages/Dashboard/OrganizationPage";
 
 function App() {
   return (
@@ -32,6 +33,12 @@ function App() {
         <Route path="/donar" element={
           <ProtectedRoutes>
             <Donar />
+          </ProtectedRoutes>
+
+        } />
+        <Route path="/organization" element={
+          <ProtectedRoutes>
+            <OrganizationPage />
           </ProtectedRoutes>
 
         } />

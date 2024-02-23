@@ -5,6 +5,7 @@ import Layout from "../components/shared/Layout/Layout";
 import Modal from "../components/shared/modal/Modal";
 import API from "./../services/API";
 import moment from "moment";
+import toast from "react-hot-toast";
 
 const HomePage = () => {
   const { loading, error } = useSelector((state) => state.auth);
@@ -29,7 +30,7 @@ const HomePage = () => {
 
   return (
     <Layout>
-      {error && <span>{alert(error)}</span>}
+      {error && <span>{toast(error)}</span>}
 
       {loading ? (
         <Spinner />
@@ -51,7 +52,7 @@ const HomePage = () => {
                   <th scope="col">Blood Group</th>
                   <th scope="col">Inventory Type</th>
                   <th scope="col">Quantity</th>
-                  <th scope="col">Donar Email</th>
+                  <th scope="col">Don ar Email</th>
                   <th scope="col">Time & Date</th>
                 </tr>
               </thead>
