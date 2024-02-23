@@ -101,3 +101,27 @@ h4 {
     transform: rotate(360deg);
   }
 }
+
+
+/* --------------
+----navbar-----
+---------------- */
+
+.navbar {
+  background-color: #111226 !important;
+  color: aliceblue !important;
+  padding: 15px;
+}
+
+.navbar-brand,
+.nav-link {
+  background-color: #111226 !important;
+  color: aliceblue !important;
+}
+
+.nav-link {
+  display: flex;
+  margin-bottom: 0;
+  align-items: center;
+  justify-content: center;
+}

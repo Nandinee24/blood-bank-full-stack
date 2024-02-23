@@ -12,7 +12,7 @@ export const userLogin = createAsyncThunk(
       //store token
       if (data.success) {
         localStorage.setItem("token", data.token);
-        // toast.success(data.message);
+        // toast.success(data.message); 
         alert(data.message)
         window.location.replace('/');
 
@@ -21,7 +21,7 @@ export const userLogin = createAsyncThunk(
 
     } catch (error) {
       if (error.response && error.response.data.message) {
-        console.log("error")
+        console.log(error)
         return rejectWithValue(error.response.data.message);
 
       } else {

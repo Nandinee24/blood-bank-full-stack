@@ -10,16 +10,19 @@ const Register = () => {
 
     {error && <span>{alert(error)}</span>}
 
-    {loading ? (<Spinner />) : (<div className="row g-0">
-      <div className="col-md-4 form-container">
-        <Form
+    {loading ? (
+      <Spinner />
+    ) : (
+      <div className="row g-0">
+        <div className="col-md-4 form-container">
+          <Form
 
-          formTitle={"Registration Page"}
-          submitBtn={"Register"}
-          formType={"register"}
-        />
-      </div>
-    </div>)}
+            formTitle={"Registration Page"}
+            submitBtn={"Register"}
+            formType={"register"}
+          />
+        </div>
+      </div>)}
   </>
   );
 };
