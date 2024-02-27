@@ -10,6 +10,7 @@ import PublicRoutes from "./components/Routes/PublicRoutes";
 import Donar from "./pages/Dashboard/Donar";
 import Hospitals from './pages/Dashboard/Hospitals';
 import OrganizationPage from "./pages/Dashboard/OrganizationPage";
+import Consumer from "./pages/Dashboard/Consumer";
 
 function App() {
   return (
@@ -27,6 +28,14 @@ function App() {
           element={
             <ProtectedRoutes>
               <Hospitals />
+            </ProtectedRoutes>
+          }
+        />
+        <Route
+          path="/consumer"
+          element={
+            <ProtectedRoutes>
+              <Consumer />
             </ProtectedRoutes>
           }
         />

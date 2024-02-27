@@ -46,6 +46,16 @@ const Sidebar = () => {
 
             </>
           )}
+          {user?.role === 'hostipal' && (
+            <>
+              <div className={`menu-item ${location.pathname === '/consumer ' && "active"}`}
+              >
+                <i className="fa-solid fa-building-ngo"></i>
+                <Link to='/consumer'>Consumer</Link>
+              </div>
+
+            </>
+          )}
 
 
           {/* {userMenu.map((menu) => {

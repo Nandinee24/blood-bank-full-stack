@@ -91,7 +91,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                 onChange={(e) => setRole(e.target.value)}
               />
               <label htmlFor="hostipalRadio" className="form-check-label">
-                Hostipal
+                Hospital
               </label>
             </div>
           </div>

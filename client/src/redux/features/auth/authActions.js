@@ -16,6 +16,10 @@ export const userLogin = createAsyncThunk(
         // alert(data.message)
         window.location.replace('/');
         toast.success(data.message, { autoClose: 2000 });
+        if (role === 'donar' || role === 'hostipal') {
+          window.location.replace('/organization')
+        }
+
 
       }
       return data;
