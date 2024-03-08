@@ -1,6 +1,6 @@
 import React from "react";
 import { BiDonateBlood } from "react-icons/bi";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { FaUser } from "react-icons/fa6";
 import { toast } from 'react-hot-toast'
 import { useSelector } from "react-redux";
@@ -9,6 +9,7 @@ const Header = () => {
   const { user } = useSelector((state) => state.auth);
   // const userName = user ? user.name : "";
   const navigate = useNavigate();
+  const location = useLocation();
   // logout handler
   const handleLogout = () => {
     toast.success("Logout Success");
@@ -33,6 +34,20 @@ const Header = () => {
                 <span className="badge text-bg-light">{user?.role}</span>
               </p>
             </li>
+            {
+              (location.pathname === '/' || location.pathname === '/donar' || location.pathname === '/hospital') ? (
+                <li className="nav-item mx-3">
+                  <Link to='/analytics' className="nav-link">
+                    Analytics
+                  </Link>
+                </li>
+              ) : (<li className="nav-item mx-3">
+                <Link to='/' className="nav-link">
+                  Home
+                </Link>
+              </li>)
+            }
+
             <li className="nav-item mx-3">
               <button className="btn btn-danger" onClick={handleLogout}>
                 Logout{" "}

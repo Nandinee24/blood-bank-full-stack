@@ -1,3 +1,4 @@
+import toast from 'react-hot-toast';
 import { userLogin, userRegister } from '../redux/features/auth/authActions';
 import store from '../redux/store';
 
@@ -6,7 +7,7 @@ export const handleLogin = (e, email, password, role, phone) => {
 
     try {
         if (!role || !password || !email) {
-            return alert("Please Provide all the fields")
+            toast.error("Please Provide all the fields")
         }
 
 

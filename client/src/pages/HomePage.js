@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import Spinner from "./../components/shared/Spinner";
 import Layout from "../components/shared/Layout/Layout";
 import Modal from "../components/shared/modal/Modal";
@@ -8,7 +9,8 @@ import moment from "moment";
 import toast from "react-hot-toast";
 
 const HomePage = () => {
-  const { loading, error } = useSelector((state) => state.auth);
+  const { loading, error, user } = useSelector((state) => state.auth);
+  const navigate = useNavigate()
   const [data, setData] = useState([]);
 
   //get function
@@ -30,6 +32,7 @@ const HomePage = () => {
 
   return (
     <Layout>
+      {user?.role === "admin" && navigate("/admin")}
       {error && <span>{toast(error)}</span>}
 
       {loading ? (
@@ -41,10 +44,15 @@ const HomePage = () => {
               className="ms-4"
               data-bs-toggle="modal"
               data-bs-target="#staticBackdrop"
-              style={{ cursor: "pointer" }}
+              style={{
+                cursor: "pointer",
+                display: 'flex',
+                justifyContent: 'flex-start',
+                alignItems: 'center'
+              }}
+
             >
-              <i className="fa-solid fa-plus text-danger py-4"></i>
-              Add Inventory
+              <i className="fa-solid fa-plus text-danger py-4"></i> Add Inventory
             </h5>
             <table className="table">
               <thead>

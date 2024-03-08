@@ -2,6 +2,7 @@ import React from "react";
 import Form from "../../components/shared/Form/From";
 import { useSelector } from 'react-redux'
 import Spinner from './../../components/shared/Spinner';
+import toast from "react-hot-toast";
 
 const Login = () => {
 
@@ -9,7 +10,7 @@ const Login = () => {
 
   return (
     <>
-      {error && <span>{alert(error)}</span>}
+      {error && <span>{toast.error(error)}</span>}
       {
         loading ? (
           <Spinner />
