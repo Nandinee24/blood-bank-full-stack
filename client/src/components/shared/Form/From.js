@@ -10,7 +10,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
   const [name, setName] = useState("");
   const [organizationName, setOrganizationName] = useState("");
   const [hospitalName, setHospitalName] = useState("");
-  const [website, setWebsite] = useState("");
+  // const [website, setWebsite] = useState("");
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
   return (
@@ -27,7 +27,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
               name,
               organizationName,
               hospitalName,
-              website,
+
               address,
               phone
             );
@@ -180,7 +180,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                       onChange={(e) => setPassword(e.target.value)}
                     />
 
-                    <InputType
+                    {/* <InputType
                       labelText={"Website"}
                       labelFor={"forWebsite"}
                       id={"forWebsite"}
@@ -188,7 +188,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                       name={"website"}
                       value={website}
                       onChange={(e) => setWebsite(e.target.value)}
-                    />
+                    /> */}
                     <InputType
                       labelText={"Address"}
                       labelFor={"forAddress"}

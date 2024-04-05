@@ -33,6 +33,12 @@ const Sidebar = () => {
                 <i className="fa-solid fa-hospital"></i>
                 <Link to='/hospital'>Hospital</Link>
               </div>
+              {/* <div className={`menu-item ${location.pathname === '/donationCamp' && "active"}`}
+              >
+                <i class="fa-solid fa-tent"></i>
+                <Link to='/donationCamp'>Donation Camp</Link>
+
+              </div> */}
             </>
           )}
 
@@ -85,11 +91,13 @@ const Sidebar = () => {
 
           {user?.role === 'donar' && (
             <>
-              <div className={`menu-item ${location.pathname === '/donation ' && "active"}`}
-              >
+              <div className={`menu-item ${location.pathname === '/donation ' && "active"}`}>
                 <i className="fa-solid fa-building-ngo"></i>
                 <Link to='/donation'>Donation</Link>
+                {/* <Link to='/slot'>Book Appointment</Link> */}
               </div>
+
+
 
             </>
           )}

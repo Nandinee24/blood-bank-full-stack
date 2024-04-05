@@ -21,7 +21,7 @@ const Hospitals = () => {
 
   useEffect(() => {
     getDonars();
-  });
+  }, []);
 
   return (
     <Layout>

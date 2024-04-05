@@ -16,6 +16,7 @@ import DonarList from "./pages/Admin/DonarList";
 import HospitalList from "./pages/Admin/HospitalList";
 import OrgList from "./pages/Admin/OrgList";
 import AdminHome from "./pages/Admin/AdminHome";
+// import DonationCamp from "./pages/Dashboard/DonationCamp";
 
 function App() {
   return (
@@ -92,6 +93,14 @@ function App() {
             </ProtectedRoutes>
           }
         />
+        {/* <Route
+          path="/donationCamp"
+          element={
+            <ProtectedRoutes>
+              <DonationCamp />
+            </ProtectedRoutes>
+          }
+        /> */}
         <Route path="/donar" element={
           <ProtectedRoutes>
             <Donar />
@@ -108,7 +117,8 @@ function App() {
 
           <PublicRoutes>
             <Login />
-          </PublicRoutes>} />
+          </PublicRoutes>
+        } />
         <Route path="/register" element={
 
           <PublicRoutes>

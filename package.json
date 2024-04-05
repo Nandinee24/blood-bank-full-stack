@@ -12,6 +12,7 @@
   "author": "nandinee",
   "license": "ISC",
   "dependencies": {
+    "@getbrevo/brevo": "^2.0.0-beta.4",
     "assert": "^2.1.0",
     "bcryptjs": "^2.4.3",
     "buffer": "^6.0.3",
@@ -24,6 +25,7 @@
     "mongodb": "^6.3.0",
     "mongoose": "^8.1.0",
     "morgan": "^1.10.0",
+    "nodemailer": "^6.9.13",
     "nodemon": "^3.0.3"
   }
 }

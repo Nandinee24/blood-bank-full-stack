@@ -42,9 +42,9 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, 'password is required'],
     },
-    website: {
-        type: String,
-    },
+    // website: {
+    //     type: String,
+    // },
     address: {
         type: String,
         required: [true, 'address is required'],

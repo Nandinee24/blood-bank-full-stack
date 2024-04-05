@@ -23,7 +23,7 @@ export const handleRegister = (e,
     name,
     organizationName,
     hospitalName,
-    website,
+
     address,
     phone) => {
     e.preventDefault()
@@ -36,7 +36,7 @@ export const handleRegister = (e,
                 name,
                 organizationName,
                 hospitalName,
-                website,
+
                 address,
                 phone
             }
