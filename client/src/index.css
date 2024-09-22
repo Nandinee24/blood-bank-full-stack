@@ -12,12 +12,13 @@
   justify-content: center;
   min-height: 100vh;
   width: 100%;
+  background: linear-gradient(rgba(197, 65, 65, 0.1), rgba(95, 19, 36, 0.1));
 
 }
 
 .text-center {
   text-decoration: none;
-  color: #25274d;
+  color: #b12c3c;
 }
 
 .d-flex {
@@ -28,17 +29,17 @@
 
 .d-flex .btn {
   margin-bottom: 10px;
-  border-color: #25274d;
-  color: #25274d;
+  border-color: #b12c3c;
+  color: #b12c3c;
 }
 
 .d-flex .btn:hover {
-  background-color: #25274d;
+  background-color: #b12c3c;
   color: aliceblue;
 }
 
 .d-flex .btn:active {
-  background-color: #36397b;
+  background-color: #c35e7e;
   color: aliceblue;
 }
 
@@ -53,12 +54,13 @@ h4 {
 
 
 .glass {
-  background: linear-gradient(rgb(132, 114, 231, 0.1), rgba(34, 30, 55, 0.1));
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(220, 219, 228, 0.1));
+  background-color: white;
   padding: 50px;
 
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 10px;
+  border-radius: 5px;
 
   border: 1px solid rgba(127, 122, 155, 0.18);
   box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.3);
