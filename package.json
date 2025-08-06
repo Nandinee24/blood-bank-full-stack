@@ -13,7 +13,7 @@
   "author": "nandinee",
   "license": "ISC",
   "dependencies": {
-    "@getbrevo/brevo": "^2.0.0-beta.4",
+    "@getbrevo/brevo": "^3.0.1",
     "assert": "^2.1.0",
     "bcryptjs": "^2.4.3",
     "buffer": "^6.0.3",
